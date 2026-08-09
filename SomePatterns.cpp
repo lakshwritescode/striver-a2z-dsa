@@ -13,6 +13,18 @@ void SquareStars(int n)
     }
 }
 
+void rightAngledTriangle(int n)
+{
+    for(int i = 0; i<n;i++)
+    {
+        for(int j = 0 ;j<i;j++)
+        {
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+
 
 int main()
 {
@@ -21,6 +33,9 @@ int main()
     cin>>n;
     cout<<"Square Pattern below"<<endl;
     SquareStars(n);
+
+    cout << "Right angled traingle pattern below" << endl;
+    rightAngledTriangle(n);
 
     return 0;
 }
