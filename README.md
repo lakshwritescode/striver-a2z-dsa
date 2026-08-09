@@ -1,8 +1,6 @@
 # striver-a2z-dsa
 DSA solutions and practice following Striver's A2Z DSA Sheet.
-# Striver A2Z DSA
 
-# Striver A2Z DSA
 
 My solutions while completing [Striver's A2Z DSA Sheet](https://takeuforward.org/dsa/strivers-a2z-sheet-learn-dsa-a-to-z).
 
