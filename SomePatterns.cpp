@@ -25,6 +25,17 @@ void rightAngledTriangle(int n)
     }
 }
 
+void rightNumberTriangle(int n)
+{
+    for (int i = 1; i <=n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
 
 int main()
 {
@@ -36,6 +47,10 @@ int main()
 
     cout << "Right angled traingle pattern below" << endl;
     rightAngledTriangle(n);
+
+    cout << "Right Number traingle pattern below" << endl;
+    rightNumberTriangle(n);
+
 
     return 0;
 }
