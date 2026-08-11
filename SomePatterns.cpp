@@ -49,22 +49,51 @@ void rightNumberTriangle2(int n)
     }
 }
 
+void downTriangle(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 0; j < n-i+1 ; j++)
+        {
+            cout << "* " ;
+        }
+        cout << endl;
+    }
+}
+
+void downTriangleNums(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i + 1; j++)
+        {
+            cout << j ;
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     cout<<"give input for pattern"<<endl;
     int n;
     cin>>n;
-    // cout<<"Square Pattern below"<<endl;
+    
     // SquareStars(n);
 
-    // cout << "Right angled traingle pattern below" << endl;
+    
     // rightAngledTriangle(n);
 
-    // cout << "Right Number 1 traingle pattern below" << endl;
+    
     // rightNumberTriangle1(n);
 
-    cout << "Right Number 2 traingle pattern below" << endl;
-    rightNumberTriangle2(n);
+   
+    // rightNumberTriangle2(n);
+
+   
+    // downTriangle(n);
+
+    downTriangleNums(n);
 
     return 0;
 }
