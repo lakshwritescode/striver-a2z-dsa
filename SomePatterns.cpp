@@ -123,6 +123,39 @@ void diamond(int n)
     downPyramid(n);
 }
 
+void halfDiamond(int n)
+{
+    for(int i = 1; i <= 2*n - 1 ; i++)
+    {
+        int stars = i;
+        if( i > n) stars = 2*n - i;
+        for(int j = 1 ; j<= stars; j++)
+        {
+            cout<< "* ";
+        }
+        cout<<endl;
+        
+    }
+}
+
+
+void rightTriangle01(int n){
+    int start = 1;
+    for(int i = 1 ; i<= n; i++)
+    {
+        if(start % 2 == 0) start = 0;
+        else start = 1 ;
+
+        for(int j = 1; j <= i; j++)
+        {
+            cout << start ;
+            start = 1 - start ;
+        }
+        cout<<endl;
+    }
+
+
+}
 int main()
 {
     cout<<"give input for pattern"<<endl;
@@ -149,7 +182,12 @@ int main()
 
     //downPyramid(n);
 
-    diamond(n);
+    //diamond(n);
+
+    //halfDiamond(n);
+
+
+    rightTriangle01(n);
 
     return 0;
 }
