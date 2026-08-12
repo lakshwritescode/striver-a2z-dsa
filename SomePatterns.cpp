@@ -156,6 +156,40 @@ void rightTriangle01(int n){
 
 
 }
+
+
+void numberCave(int n)
+{
+    int space = 2*(n-1);
+    for(int i = 1; i<= n ; i++)
+    {
+        //numbers
+
+        for(int j = 1 ; j <= i ; j++)
+        {
+            cout<< j ;
+            
+        }
+
+        //spaces
+
+        for(int j = 1 ; j <= space; j++)
+        {
+            cout << " ";
+        }
+
+        //numbers
+
+        for (int j = i; j >= 1; j--)
+        {
+            cout << j;
+        }
+
+        cout<<endl;
+        space -= 2;
+    }
+}
+
 int main()
 {
     cout<<"give input for pattern"<<endl;
@@ -163,16 +197,12 @@ int main()
     cin>>n;
     
     // SquareStars(n);
-
     
     // rightAngledTriangle(n);
-
     
     // rightNumberTriangle1(n);
-
    
     // rightNumberTriangle2(n);
-
    
     // downTriangle(n);
 
@@ -186,8 +216,11 @@ int main()
 
     //halfDiamond(n);
 
+    //rightTriangle01(n);
 
-    rightTriangle01(n);
+    // numberCave(n);
+
+    
 
     return 0;
 }
