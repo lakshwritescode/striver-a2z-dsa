@@ -206,6 +206,21 @@ void numberRightTri(int n)
     }
 }
 
+void alphabet1(int n)
+{
+    int number = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        for (char ch = 'A'; ch <'A'+ i ;ch++)
+        {
+            cout << ch << " ";
+           
+        }
+
+        cout << endl;
+    }
+}
+
 int main()
 {
     cout<<"give input for pattern"<<endl;
@@ -236,7 +251,9 @@ int main()
 
     // numberCave(n);
 
-    numberRightTri(n);
+    // numberRightTri(n);
+
+    alphabet1(n);
 
         return 0;
 }
