@@ -93,6 +93,132 @@ void explainVector()
 
 }
 
+void explainLists()
+{
+    list<int> ls;
+    ls.push_back(2);
+    //{2}
+    ls.emplace_back(4);
+    //{2,4}
+    ls.push_front(5);
+    //{5,2,4}
+    ls.emplace_front(7); 
+
+
+}
+
+
+void explainDeque()
+{
+    deque<int> dq;
+    dq.push_back(1);
+    dq.emplace_back(2);
+    dq.push_front(3);
+    dq.emplace_front(4);
+
+    for(auto it : dq)
+    {
+        cout << it << " ";
+    }
+
+}
+
+
+void explainStack() //last in first out
+{
+    stack<int> st;
+
+    st.push(3);
+    st.push(4);
+    st.push(5);
+    st.push(6);
+    st.push(7);
+    st.emplace(8);
+    cout<< st.top()<<endl;
+    cout<<st.size()<<endl;
+    //TC BIG O OF 1
+}
+
+void explainqueue()//first in first out
+{
+    queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.emplace(4);
+
+    q.back() += 5;
+    cout <<q.back()<<endl;
+    q.pop();
+
+    cout<<q.front();
+
+
+}
+
+void explainPriorityQueue()
+{
+    priority_queue <int> pq;
+    pq.push(5);
+    pq.push(2);
+    pq.push(8);
+    pq.push(10);
+    pq.push(12);
+
+    cout<<pq.top()<<endl;
+
+    priority_queue<int , vector<int> , greater<int>> pqq; //minimum heap
+    pqq.push(5);
+    pqq.push(2);
+    pqq.push(8);
+    pqq.push(10);
+    pqq.push(12);
+}
+
+void explainSet()
+{
+    set<int> st;
+    st.insert(4);
+    st.insert(6);
+    st.insert(2);
+    st.insert(8);
+    st.emplace(13);
+    st.insert(12);
+
+    auto it = st.find(6);
+
+    st.erase(13);
+
+    int cnt = st.count(8);
+    auto it = st.upper_bound(98);
+    auto it = st.lower_bound(99);
+}
+
+//unorderedset = randomised order
+
+
+void explainMap()
+{
+    map <int , int > mpp; // { key , value}
+
+    map<int , pair<int , int >> mpp;
+
+    map<pair<int,int> , int > mpp;
+
+    mpp[1] = 2;
+    // mpp.emplace({3,1});
+
+    mpp.insert({2,4});
+    
+    
+    //map stores unique keys in sorted order , as same as set
+
+    
+
+
+
+}
+
 int main()
 {
 
