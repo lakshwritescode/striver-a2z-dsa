@@ -15,7 +15,6 @@ void printName(int count) //print name 5 times using recursion
 
 }
 
-
 void backtrackDescending(int n)
 {
 
@@ -51,13 +50,51 @@ void descendingNum(int n)
     descendingNum(n);
 }
     
+void sumOfFirstNnumbers(int n , int sum)
+{
+    if( n < 1 )
+    {
+        cout << sum ;
+        return;
+    }
+
+    sumOfFirstNnumbers(n-1 , sum + n);
+}
+
+int sumOfFirstN(int n)
+{
+
+    if(n == 0) return 0;
+
+    return n+ sumOfFirstN(n-1);
+
+}
+
+
+int factorial(int n)
+{
+    if( n == 1) return 1;
+
+    return n*factorial(n-1);
+}
+
 
 int main()
 {
 
-//    printName(count);
-//    descendingNum(5);
+    //printName(count);
+    
+    //descendingNum(5);
+    
     //backtrackDescending(0);
-    backtrackAscending(6);
-return 0;
+    
+    //backtrackAscending(6);
+
+    //sumOfFirstNnumbers(10,0);
+
+    //cout << sumOfFirstN(9)<< " "<<endl;
+
+    cout << factorial(5)<< " "<< endl;  
+
+    return 0;
 }
