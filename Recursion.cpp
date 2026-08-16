@@ -61,6 +61,8 @@ void sumOfFirstNnumbers(int n , int sum)
     sumOfFirstNnumbers(n-1 , sum + n);
 }
 
+
+
 int sumOfFirstN(int n)
 {
 
@@ -78,8 +80,37 @@ int factorial(int n)
     return n*factorial(n-1);
 }
 
+void reverseAnArray(int i, int arr[] ,int n) // i = index , n = size
+{
+    if(i > n/2) return ; 
+    swap(arr[i] , arr[n-i-1]);
 
-int main()
+    reverseAnArray(i+1 , arr, n);
+
+}
+
+bool checkPalindrome(int i , string s)
+{
+    if( i >= s.size()/2 ) return true;
+
+    if( s[i] != s[s.size()-i-1]){ return false ;}
+
+    return checkPalindrome(i+1 , s);
+}
+
+int fibonacci(int n)
+{
+    if(n <= 1)
+    {
+        return n;
+    }
+
+    return fibonacci(n-1) + fibonacci(n-2);
+
+}
+
+    int
+    main()
 {
 
     //printName(count);
@@ -94,7 +125,31 @@ int main()
 
     //cout << sumOfFirstN(9)<< " "<<endl;
 
-    cout << factorial(5)<< " "<< endl;  
+    //cout << factorial(5)<< " "<< endl;  
 
-    return 0;
+    // int n;
+    // cout<<" Input size of array " <<endl;
+    // cin>>n;
+    // int arr[n];
+    // for(int i = 0 ; i < n; i++)
+    // {
+    //     cin >> arr[i];
+    // }
+
+    // reverseAnArray( 0 , arr , n);
+
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cout << arr[i] << " ";
+
+        
+    // }
+    // return 0;
+
+    // string s = "madam";
+    // cout << checkPalindrome(0,s);
+
+
+    cout << fibonacci(5);
+
 }
