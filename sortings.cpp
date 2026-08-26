@@ -32,9 +32,9 @@ void bubble(int arr[], int n)
     }
 }
 
-void insertion(int n, int arr[])
+void insertion(int arr[], int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         int j = i;
         while (j > 0 && arr[j - 1] > arr[j])
@@ -62,13 +62,31 @@ void recursiveBubble(int arr[], int n)
     recursiveBubble(arr , n-1);
 }
 
+void recursiveInsertion(int arr[] , int n)
+{
+    if (n <= 1)
+        return;
+
+    // Sort first n-1 elements
+    recursiveInsertion(arr, n - 1);
+
+    // Insert the last element
+    int j = n - 1;
+
+    while (j > 0 && arr[j - 1] > arr[j])
+    {
+        swap(arr[j - 1], arr[j]);
+        j--;
+    }
+}
+
 int main()
 {
     int n;
     n = 6;
     int arr[n] = {13 , 46, 24 , 52 , 20 , 9};
 
-    recursiveBubble(arr , n);
+    insertion(arr , n);
 
     for(int i = 0 ; i<n ; i++)
     {
