@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-class Solution
-{
-public:
+
+
     int removeDuplicates(vector<int> &nums)
     {
         int i = 0;
@@ -16,4 +15,5 @@ public:
         }
         return (i + 1);
     }
-};
+
+    
