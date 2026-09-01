@@ -80,18 +80,33 @@ void recursiveInsertion(int arr[] , int n)
     }
 }
 
+int checkSort(int arr[] , int n)
+{   
+    int ans  = 1;
+    for(int i = 0 ; i < n-1; i++)
+    {
+        if(arr[i] > arr[i+1] )
+        {
+            ans = 0;
+        }
+    }
+    return ans;
+}
+
 int main()
 {
     int n;
     n = 6;
     int arr[n] = {13 , 46, 24 , 52 , 20 , 9};
 
-    insertion(arr , n);
+    // insertion(arr , n);
 
-    for(int i = 0 ; i<n ; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    // for(int i = 0 ; i<n ; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+
+    cout << endl << checkSort(arr , n) ;
 
     return 0;
 }
