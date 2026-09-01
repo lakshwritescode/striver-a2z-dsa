@@ -97,8 +97,8 @@ int main()
 {
     int n;
     n = 6;
-    int arr[n] = {13 , 46, 24 , 52 , 20 , 9};
-
+    //int arr[n] = {13 , 46, 24 , 52 , 20 , 9};
+    int arr[n] = {13 , 46 , 46 , 52  , 76 , 84};
     // insertion(arr , n);
 
     // for(int i = 0 ; i<n ; i++)
