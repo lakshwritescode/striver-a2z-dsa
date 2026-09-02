@@ -23,12 +23,24 @@ void twopointer(int arr[], int n)
     }
 }
 
+void reverseFromK(int arr[] , int n , int k)
+{
+    int left = k + 1;
+    int right = n - 1;
+    while (left < right)
+    {
+        swap(arr[left], arr[right]);
+        left++;
+        right--;
+    }
+}
+
 int main()
 {
     int n = 6;
     int arr[n] = {12 , 14 , 13 , 11 , 9 , 23};
 
-    twopointer(arr, n);
+    reverseFromK(arr, n , 2);
 
     for(int i = 0 ; i< n; i++)
     {
