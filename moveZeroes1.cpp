@@ -14,6 +14,14 @@ void moveZero(int arr[] ,  int n)
     }
 }
 
+void print(int arr[] , int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+
 int main()
 {
     int n = 7;
@@ -22,10 +30,7 @@ int main()
 
     moveZero(arr , n);
 
-    for(int i = 0 ; i < n ; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    print(arr , n);
 
     return 0;
 }
