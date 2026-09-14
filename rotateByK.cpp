@@ -21,6 +21,25 @@ void rotate(int arr[], int n , int k)
     }
 }
 
+void reverse(int arr[] , int n)
+{
+    int s = 0;
+    int e = n-1;
+
+    while(s < e)
+    {
+        swap(arr[s] , arr[e]);
+        s++;e--;
+    }
+}
+
+void rotateByReverse(int arr[] , int n , int k)
+{
+    reverse(arr , arr+k);
+    reverse(arr+k , arr+n);
+    reverse(arr , n);
+}
+
 int main()
 {
     int n = 7;
