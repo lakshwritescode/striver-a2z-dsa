@@ -57,3 +57,5 @@ int longestSubarrayWithSumK(vector<int> a, long long k) //better solution
     }
     return maxLen;
 }
+
+// im sorry if youre reading this but i just wanted to make a contribution lmao ,  i was dead exhausted today 
