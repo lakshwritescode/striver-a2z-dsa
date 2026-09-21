@@ -21,11 +21,22 @@ string replaceSpaces(string str)
     return temp;
 }
 
+void replaceSpacesInplace(string str)
+{
+    for(int i = 0 ; i< str.length() ; i++)
+    {
+        
+    }
+}
+
 int main()
 {
     string str = "my name is laksh";
 
-    cout << str << endl << replaceSpaces(str) <<endl;
+    //cout << str << endl << replaceSpaces(str) <<endl;
+
+    replaceSpacesInplace(str);
+    cout << str << endl;
 
     return 0 ;
 }
