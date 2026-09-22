@@ -10,11 +10,29 @@ void brute(int arr[] , int n , int target)
             if(arr[i] + arr[j] == target)
             {
                 cout << i << " " << j<<endl;
+                return;
             }
         }
     }
 
    
+}
+
+void better(int arr[] , int n ,int target)
+{
+    map<int , int>mpp;
+
+    for(int i = 0 ; i< n ; i++)
+    {
+        int a = arr[i];
+        int moreNeeded = target - a;
+
+        if(mpp.find(moreNeeded) != mpp.end())
+        {
+            cout << mpp[moreNeeded] << " " << i<<endl;
+        }
+        mpp[a] = i;
+    }
 }
 
 int main()
@@ -23,7 +41,7 @@ int main()
     int target = 14;
     int arr[n] = {2,6,5,8,11};
 
-    brute(arr,n , target) ;
+    better(arr,n , target) ;
 
     return 0 ;
 }
